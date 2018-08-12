@@ -1,0 +1,93 @@
+<div>
+    <br>
+    <h2 class="labelePlava">Izaberite potrošača za kog želite da prikažete račune.</h2>
+    <br>
+    <table class="tabela" id="table" style="border: 6px solid #d0ecfd; 
+           " data-bind="ojComponent: {component: 'ojTable', 
+                 data: listaPotrosaca,
+                   columnsDefault: {headerStyle: 'font-weight: bold;'},
+
+                    selectionMode: {row: 'single', column: 'multiple'},
+                    rootAttributes: {'style':'width: 100%; height:100%;'},
+                    columns: [
+                        {headerText: 'ED broj', field: 'edBroj'},
+                        {headerText: 'Kategorija potrosnje', field: 'kategorijaPotrosnje'},
+                        {headerText: 'Vrsta snabdevanja', field: 'vrstaSnabdevanja'},
+                        {headerText: 'Adresa', field: 'adresa'}]}">
+    </table>
+
+    <div>
+        <br/>
+        <br/>
+
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <button class ="btn btn-info btn-block " style="font-size: 17px" data-bind="click:currentSelection"><i class="fa fa-bar-chart" aria-hidden="true"></i> Prikaži račune</button>
+
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    </div>
+    <br><br><br>
+    <!--<div id= izabraniRacun class="alert alert-success" role="alert" style="display: none">
+        Izabrali ste potrošača sa ID-em: <input data-bind="value: idIzabranogPotrosaca" disabled="true"/>
+    </div>-->
+</div>
+<hr>
+<br>
+<br> 
+<div class="col-md-6 col-sm-6 col-xs-12">
+    <div id="divId" style="display: none">
+        <table id="tabelaRacuni" style="border: 6px solid #d0ecfd;" data-bind="ojComponent: {component: 'ojTable', 
+           columnsDefault: {headerStyle: 'font-weight: bold;'},
+           selectionMode: {row: 'single', column: 'multiple'},
+           rootAttributes: {'style':'width: 100%; height:100%;'},
+        data: listaRacuna,
+                scrollPolicy: 'loadMoreOnScroll',
+
+        columns: [
+            {headerText: 'Obracunski period', field: 'idOp'},
+            {headerText: 'Ukupan iznos', field: 'ukupanIznos'}
+            ]}">
+        </table>
+        <br>
+        <br>
+        <br>
+
+    </div>
+    <div id ="buttons" style="display: none">
+        <div class="col-md-6 col-sm-6 col-xs-12" >
+            <button type="submit" class ="btn btn-info btn-block " style="font-size: 17px" data-bind="click:fPrikaziPotrosnju" class="btn btn-default"><i class="fa fa-info-circle" aria-hidden="true"></i> Prikaži potrošnju</button>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <button type="submit" class ="btn btn-info btn-block " style="font-size: 17px" data-bind="click:fVratiRacun" class="btn btn-default"><i class="fa fa-download" aria-hidden="true"></i> Preuzmi račun</button>
+        </div>
+    </div>
+</div>
+<div class="col-md-1 col-sm-1 col-xs-12"></div>
+
+<div class="col-md-5 col-sm-5 col-xs-12">
+    <div id='chart-container' style="display: none">
+        <oj-chart id="barChart"
+                  type="bar" 
+                  orientation="[[orientationValue]]"
+                  stack="[[stackValue]]"
+                  series="[[barSeriesValue]]"
+                  animation-on-display="auto"
+                  animation-on-data-change="auto"
+                  hover-behavior="dim"
+                  y-axis.title="Ukupan iznos"
+                  x-axis.title="Obračunski period"
+                  style="max-width:500px;width:100%;height:600px;">
+        </oj-chart>
+<!--        <oj-toolbar id="myToolbar" aria-label="Chart Display Options Toolbar" aria-controls="barChart"
+                    style="max-width:500px;width:100%;">
+             vertical/horizontal toggle button 
+            <demo-chart-orientation-control id="orientationControl" type="bar" focus-management="none" orientation="{{orientationValue}}">
+            </demo-chart-orientation-control>
+            <span role="separator" aria-orientation="vertical" class="oj-toolbar-separator"></span>
+             unstacked/stacked toggle button 
+            <demo-chart-stack-control id="stackControl" type="bar" focus-management="none" stack="{{stackValue}}">
+            </demo-chart-stack-control>
+        </oj-toolbar>-->
+    </div>
+</div>

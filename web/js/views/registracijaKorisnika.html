@@ -1,0 +1,86 @@
+<div id="divId">
+    <div>
+
+    </div>
+    <div class = "container-fluid bg">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-12"></div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <form class = "form-container">
+                    <div class="form-group">
+                        <h1 class="uvidURacun" style="text-align: center"><b>Registrujte se</b></h1>
+
+                        <br>
+                        <label for="naziv" style="color: #0572ce; letter-spacing: 1px;  font-size: 17px">Naziv: </label>
+                        <input type="text" class="form-control" id="naziv" data-bind="value: naziv" readonly=""/>
+                        <br>
+                        <label for="jmbg" style="color: #0572ce; letter-spacing: 1px;  font-size: 17px">JMBG:</label>
+                        <input type="text" class="form-control" id="jmbg" data-bind="value: jmbg" readonly=""/>
+                        <br> 
+                        <label for="mbroj" style="color: #0572ce; letter-spacing: 1px;  font-size: 17px">Maticni broj:</label>
+                        <input type="text" class="form-control" id="mbroj" data-bind="value: maticniBroj" readonly=""/>
+                        <br>
+                        <label for="nbroj" style="color: #0572ce; letter-spacing: 1px;  font-size: 17px">Naplatni broj:</label>
+                        <input type="text" class="form-control" id="nbroj" data-bind="value: naplatniBroj" readonly=""/>
+                        <br>
+                        <label for="korime" style="color: #0572ce; letter-spacing: 1px;  font-size: 17px">Korisničko ime</label>
+                        <input type="text" class="form-control" id="korime"
+                               required="true" placeholder="Korisnicko ime" data-bind="value: korisnickoIme"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="loz" style="color: #0572ce; letter-spacing: 1px;  font-size: 17px">Lozinka</label>
+                        <input type="password" class="form-control" required="true" id="loz" placeholder="Lozinka" data-bind="value: lozinka"/>
+                    </div>
+                  
+                    <div style="border: 1px solid lightgrey">
+                        <center>
+                            <br>
+                            <p>
+                                <strong>Unesite kod ispod slike</strong>
+                            </p>
+                            <img id="Imageid" src="css/images/slika.jpg" style="width: 250; height: 100; border: 0;" alt=" "/>
+                            <br><br>
+                            <input type="text" name="captcha" required="true" value="" placeholder="Kod sa slike" data-bind="value: kodSaSlike">
+                            <br><br>
+                        </center>
+                    </div>
+                    <br>
+                    <div id="divError" class="alert alert-danger" role="alert" style="display: none">
+                        Niste dobro uneli kod sa slike!           
+                    </div>
+                    <div id="validacija" class="alert alert-danger" role="alert" style="display: none">
+                        Korisničko ime i lozinka moraju imati bar 3 karaktera.         
+                    </div>
+                    <button id="myBtn" style="font-size: 17px; letter-spacing: 1px; " type="submit" class ="btn btn-info btn-block " data-bind="click:registracijaKorisnika" class="btn btn-default"><i class="fa fa-registered" aria-hidden="true"></i> Registruj se</button>
+                    <div class="checkbox">
+                        <label>
+                            <a href="http://localhost:8383/Aplikacija/web/index.html">
+                                Vrati me na početnu stranu.
+                            </a>
+                        </label>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12"></div>
+
+        </div>
+
+
+    </div>
+    <!--    <div>
+            <label for="text-input">Korisnicko ime: </label>
+            <input id="text-input" type="text" required="true"  data-bind="ojComponent:
+               {component: 'ojInputText', value: korisnickoIme}"
+                   /> 
+            <br/>
+    
+            <label for="text-input">Lozinka: </label>
+            <input id="text-input" type="text" required="true"  data-bind="ojComponent:
+               {component: 'ojInputText', value: lozinka}"
+                   /> 
+            <br/>
+            <button data-bind="click:registracijaKorisnika">Registruj se.</button>
+    
+        </div>-->
+</div>

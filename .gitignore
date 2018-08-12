@@ -12,3 +12,6 @@ hybrid/plugins/*
 
 .DS_Store
 Thumbs.db
+!/web/
+!/themes/
+!/node_modules/

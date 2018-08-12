@@ -1,0 +1,35 @@
+<div>
+    <div class = "container-fluid bg">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <form class = "form-container" style="background-color: white">
+                    <div class="form-group" >
+                        <img id="Imageid" src="css/images/uvid-racun-ikonica-siva.png" style=" width: 250; height: 100; border: 20; display: block; margin-left: auto; margin-right: auto;" alt=" "/>
+                        <br>
+                        <h1 class="uvidURacun" style="text-align: center"><b>Uvid u račun</b></h1>
+                        <br>
+                        <div id= "myDIV" class="alert alert-danger" role="alert" style="display: none">
+                            Pogrešno ste uneli korisnicko ime ili lozinku            
+                        </div>
+                        <div id="uspesnaRegistracija" class="alert alert-success" role="alert" style="display: none">
+                            Uspešno ste se registrovali. Sada možete da se ulogujete.          
+                        </div>
+                        <label for="exampleInputEmail1" style="color: #0572ce; letter-spacing: 1px;  font-size: 17px">Korisničko ime</label>
+                        <br>
+                        
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Korisnicko ime" data-bind="value: username"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" style="color: #0572ce; letter-spacing: 1px; font-size: 17px">Lozinka</label>
+                        <br>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Lozinka" data-bind="value: password"/>
+                    </div>
+                    <br>
+                    <button style="font-size: 17px; letter-spacing: 1px; " id="myBtn" type="submit" class ="btn btn-info btn-block " data-bind="click:login" class="btn btn-default" ><i class="fa fa-sign-in" aria-hidden="true"></i> Ulogujte se</button>
+                </form>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        </div>
+    </div>
+</div>

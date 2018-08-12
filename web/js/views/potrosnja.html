@@ -1,0 +1,73 @@
+<div>
+        <br>
+        <h2 class="labelePlava">Izabrani račun: <span data-bind="text: labelaPeriod"></span></h2>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+
+            <table  class="tabela"  style=" border: 6px solid #d0ecfd;" data-bind="ojComponent: {component: 'ojTable', 
+                 data: listaPotrosnje,
+                 columnsDefault: {headerStyle: 'font-weight: bold;'},
+                    selectionMode: {row: 'single', column: 'multiple'},
+                    rootAttributes: {'style':'width: 100%; height:100%;'},
+                    columns: [
+                        {headerText: 'Tarifa', field: 'naziv'},
+                        {headerText: 'Iznos', field: 'iznos'}]
+                }">
+            </table>
+            <br><br>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <h2 class="labelePlava" style="text-align: center">Potrošnja po zonama za izabrani račun</h2>
+            <div  class="col-md-3 col-sm-3 col-xs-12"></div>
+            <div  class="col-md-9 col-sm-9 col-xs-12">
+                <div id="sampleDemo" style="" class="demo-padding demo-container">
+                    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+
+                        <div id='chart-container'>
+                            <oj-chart id="pieChartZone"
+                                      type="pie" 
+                                      series="[[pieZoneSeriesValue]]"
+                                      animation-on-display="auto"
+                                      animation-on-data-change="auto"
+                                      style-defaults.three-d-effect="[[threeDValue]]"
+                                      hover-behavior="dim"
+                                      style="max-width:500px;width:100%;height:350px;">
+                            </oj-chart>
+                            <!-- 2D/3D toggle button -->
+                            <demo-chart-three-d-effect-control id="threeDControl" three-d-effect="{{threeDValue}}" aria-controls="pieChart">
+                            </demo-chart-three-d-effect-control>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <h2 class="labelePlava" style="text-align: center">Potrošnja po tarifama za izabrani račun</h2>
+            <div  class="col-md-3 col-sm-3 col-xs-12"></div>
+            <div  class="col-md-9 col-sm-9 col-xs-12">
+                <div id="sampleDemo" style="" class="demo-padding demo-container">
+                    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+                        <div id='chart-container'>
+                            <oj-chart id="pieChartTarife"
+                                      type="pie" 
+                                      series="[[pieTarifeSeriesValue]]"
+                                      animation-on-display="auto"
+                                      animation-on-data-change="auto"
+                                      style-defaults.three-d-effect="[[threeDValue]]"
+                                      hover-behavior="dim"
+                                      style="max-width:500px;width:100%;height:350px;">
+                            </oj-chart>
+                            <!-- 2D/3D toggle button -->
+                            <demo-chart-three-d-effect-control id="threeDControl" three-d-effect="{{threeDValue}}" aria-controls="pieChart">
+                            </demo-chart-three-d-effect-control>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--    <div class="col-md-6 col-sm-6 col-xs-12">
+    
+        </div>-->
+
+</div>
